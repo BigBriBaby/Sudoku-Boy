@@ -1,6 +1,6 @@
 // Sudoku Boy offline cache. Serves the app from the iPad's cache; fetches updates in the background,
 // which take effect the next time the app is opened.
-const CACHE = 'sudoku-boy-v3.0';
+const CACHE = 'sudoku-boy-v4.0';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => {
